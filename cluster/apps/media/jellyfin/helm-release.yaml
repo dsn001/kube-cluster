@@ -56,7 +56,8 @@ spec:
       transcode:
         enabled: true
         type: emptyDir
-        medium: "memory"
+        #medium: "memory"
+        sizeLimit: 10Gi
     resources:
       requests:
         cpu: 500m
