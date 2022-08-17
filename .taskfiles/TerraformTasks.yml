@@ -20,3 +20,9 @@ tasks:
     dir: provision/terraform/cloudflare
     cmds:
       - terraform apply {{.CLI_ARGS}}
+
+  upgrade:
+    desc: Apply upgrade to terraform
+    dir: provision/terraform/cloudflare
+    cmds:
+      - terraform init -upgrade
