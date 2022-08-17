@@ -5,11 +5,8 @@ metadata:
   name: jellyfin-media
   namespace: media
 spec:
-  capacity:
-    storage: 1Mi
   accessModes:
-    - ReadWriteMany
-  storageClassName: ""
-  nfs:
-    server: 192.168.1.10
-    path: /nfs-export/media
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
