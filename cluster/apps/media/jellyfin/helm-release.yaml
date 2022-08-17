@@ -28,9 +28,10 @@ spec:
       tag: v10.8.4
       pullPolicy: IfNotPresent
 
-    env:
-      TZ: "Europe/Stockholm"
-      JELLYFIN_CACHE_DIR: "/config/cache"
+    jellyfin:
+      env:
+        TZ: "Europe/Stockholm"
+        JELLYFIN_CACHE_DIR: "/config/cache"
 
     service:
       main:
