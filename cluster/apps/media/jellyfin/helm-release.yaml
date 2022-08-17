@@ -68,7 +68,10 @@ spec:
         sizeLimit: 10Gi
       media:
         enabled: true
-        existingClaim: jellyfin-media
+        mountPath: /media
+        type: hostPath
+        hostPath: /media/nfsexport
+
     #podAnnotations:
       #configmap.reloader.stakater.com/reload: "jellyfin-settings"
     resources:
