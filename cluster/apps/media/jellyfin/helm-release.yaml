@@ -58,6 +58,12 @@ spec:
         type: emptyDir
         #medium: "memory"
         sizeLimit: 10Gi
+      media:
+        enabled: true
+        nfs:
+          server: 192.168.1.10
+          path: /nfs-export/media
+
     resources:
       requests:
         cpu: 500m
