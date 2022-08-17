@@ -74,12 +74,12 @@ spec:
         ingressClassName: "nginx"
         annotations:
           cert-manager.io/cluster-issuer: "letsencrypt-staging"
-          external-dns.alpha.kubernetes.io/target: "ipv4.${SECRET_DOMAIN}"
+          external-dns.alpha.kubernetes.io/target: "ipv4.${SECRET_DOMAIN_PREFIXED}"
           external-dns/is-public: "true"
           hajimari.io/enable: "true"
           hajimari.io/icon: "video-input-antenna"
         hosts:
-          - host: &host "{{ .Release.Name }}.${SECRET_DOMAIN}"
+          - host: &host "{{ .Release.Name }}.${SECRET_DOMAIN_PREFIXED}"
             paths:
               - path: /
                 pathType: Prefix
