@@ -68,7 +68,7 @@ spec:
         sizeLimit: 10Gi
       media:
         enabled: true
-        accessModes:
+        accessMode:
           - ReadWriteOnce
         nfs:
           server: 192.168.1.10
