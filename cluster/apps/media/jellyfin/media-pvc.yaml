@@ -5,6 +5,8 @@ metadata:
   name: jellyfin-media
   namespace: media
 spec:
+  capacity:
+    storage: 1Mi
   accessModes:
     - ReadWriteMany
   storageClassName: ""
